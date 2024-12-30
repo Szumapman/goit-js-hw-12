@@ -3,7 +3,7 @@ const createGalleryItem = ({webformatURL, largeImageURL, tags, likes, views, com
     galleryItem.classList.add("gallery-item");
     galleryItem.innerHTML = `
     <a href="${largeImageURL}" class="gallery-item-link">
-        <img class="gallery-item-image" src="${webformatURL}" alt="${tags}" loading="lazy" />
+        <img class="gallery-item-image" src="${webformatURL}" alt="${tags}" />
     </a>
     <ul class="info">
         <li>
