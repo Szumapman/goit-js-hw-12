@@ -59,7 +59,7 @@ async function loadImages() {
             noMatchingResults();
         } else {
             gallery.appendChild(createGallery(response.hits));
-            if (response.totalHits > imagesPerPage) {
+            if (response.totalHits > imagesPerPage * page) {
                 loadMoreButton.classList.remove("hidden");
             } else {
                 endSearchResults();
