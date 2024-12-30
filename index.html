@@ -5,10 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-js-hw-12</title>
-    <script type="module" crossorigin src="/goit-js-hw-12/assets/styles-Bb9yBArp.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/styles-Ca_dx91M.css">
+    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DEenWwFD.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-DNsIMwU4.css">
   </head>
   <body>
+    <div id="top"></div>
     <header class="header">
   <div class="container">
     <nav class="nav">
@@ -19,7 +22,7 @@
       </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./image-search.html"
+          <a class="nav-link {=$highlight-act}" href="./index.html"
             >Image search engine</a
           >
         </li>
@@ -28,81 +31,28 @@
   </div>
 </header>
 
-
     <main>
       <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/goit-js-hw-12/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
+      <div class="container">
+  <h1 class="hidden">Image search engine</h1>
 
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
+  <form class="image-search-form">
+    <input type="text" name="searchTerm" placeholder="Search images..." />
+    <button type="submit">Search</button>
+  </form>
+
+  <ul class="gallery"></ul>
+
+  <div class="loader-container hidden">
+    <span class="loader"></span>
   </div>
-</article>
+
+  <div class="load-more">
+    <button type="button" class="load-more-btn hidden">Load more</button>
+  </div>
+</div>
+
+      <a class="back-link" href="#top">Back to top</a>
 
     </main>
 
@@ -118,6 +68,14 @@
       >
         GoIT team
       </a>
+      &amp;
+      <a
+        class="footer-link"
+        href="https://github.com/Szumapman"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Paweł Szumański</a
+      >
     </p>
   </div>
 </footer>
