@@ -50,6 +50,7 @@ function endSearchResults() {
         theme: "dark",
     });
     loadMoreButton.classList.add("hidden");
+    loader.classList.add("hidden");
 }
 
 async function loadImages() {
