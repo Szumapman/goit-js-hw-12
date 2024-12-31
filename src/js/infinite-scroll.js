@@ -46,7 +46,6 @@ const endSearchResultObserver = new IntersectionObserver((entries, observer) => 
                     theme: "dark",
                 });
             }
-            loadMoreImagesObserver.unobserve(loadMoreImagesObserverTarget);
             observer.unobserve(entry.target);
         }
     });
@@ -79,6 +78,7 @@ async function loadImages() {
             if (response.totalHits > imagesPerPage * page) {
                 loadMoreImagesObserver.observe(loadMoreImagesObserverTarget);  
             } else {
+                loadMoreImagesObserver.unobserve(loadMoreImagesObserverTarget);
                 endSearchResultObserver.observe(endSearchResultObserverTarget);
                 endSearchResultObserverTarget.classList.remove("hidden");
             }
