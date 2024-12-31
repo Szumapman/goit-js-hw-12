@@ -29,7 +29,7 @@ const options = {
 const loadMoreImagesObserverTarget = document.querySelector(".infinite-scroll");
 const loadMoreImagesObserver = new IntersectionObserver(loadMoreImages, options);
 
-const endSearchResultObserverTarget = document.querySelector(".footer");
+const endSearchResultObserverTarget = document.querySelector(".back-link");
 const endSearchResultObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
